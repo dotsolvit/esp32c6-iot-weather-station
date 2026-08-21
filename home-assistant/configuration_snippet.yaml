@@ -1,0 +1,40 @@
+# ==================================================================================
+# [EN] Home Assistant Configuration Snippet for MQTT Sensors
+# [UA] Фрагмент конфігурації Home Assistant для MQTT сенсорів
+# 
+# Append this block to your /config/configuration.yaml file.
+# Додайте цей блок у кінець вашого файлу /config/configuration.yaml.
+# ==================================================================================
+
+mqtt:
+  sensor:
+    # --- Temperature Sensor / Датчик температури ---
+    - name: "Temperature"
+      unique_id: "meteo_c6_temp_aht20"
+      state_topic: "home/weather/metrics"
+      value_template: "{{ value_json.temp_aht }}"
+      unit_of_measurement: "°C"
+      state_class: "measurement"
+
+    # --- Humidity Sensor / Датчик вологості ---
+    - name: "Humidity"
+      unique_id: "meteo_c6_hum_aht20"
+      state_topic: "home/weather/metrics"
+      value_template: "{{ value_json.humidity }}"
+      unit_of_measurement: "%"
+      state_class: "measurement"
+
+    # --- Barometric Pressure Sensor / Датчик атмосферного тиску ---
+    - name: "Pressure"
+      unique_id: "meteo_c6_press_bmp280"
+      state_topic: "home/weather/metrics"
+      value_template: "{{ value_json.pressure }}"
+      unit_of_measurement: "mm Hg"
+      state_class: "measurement"
+
+    # --- Sleep Cycle Counter / Лічильник циклів прокидання ---
+    - name: "Boot Count"
+      unique_id: "meteo_c6_boot_counter"
+      state_topic: "home/weather/metrics"
+      value_template: "{{ value_json.boot }}"
+      unit_of_measurement: "cycles"
