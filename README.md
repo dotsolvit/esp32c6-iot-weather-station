@@ -80,7 +80,9 @@ The physical hardware layout is composed of the following modules:
 
 
 
-*A detailed schematic diagram and wire connection list can be found inside the `hardware/` directory.*
+*A detailed schematic diagram and wire connection list can be found below:*
+
+![Circuit Schematic Diagram](hardware/Schematic_ESP32C6.png)
 
 
 
