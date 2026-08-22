@@ -27,11 +27,6 @@ The project utilizes a two-tier IoT topology (Client ➡️ Server) for data pro
 ![System Architecture Diagram](images/architecture_diagram.png)
 
 
-### 📊 Real-Time Mobile Dashboard & Analytics
-Below is the compiled interface showcasing smooth real-time metric tracking and historical data charts within the Home Assistant Android app:
-
-![Home Assistant Dashboard and Analytics](images/screenshot-all.png)
-
 
 1. **The Endpoint (Client):** The ESP32-C6 wakes up via a hardware RTC timer ➡️ powers up the sensor array ➡️ captures climate metrics ➡️ connects to Wi-Fi 6 ➡️ publishes a JSON packet to the `home/weather/metrics` topic ➡️ cuts off sensor power ➡️ enters Deep Sleep mode for 10 minutes.
 
@@ -43,6 +38,15 @@ Below is the compiled interface showcasing smooth real-time metric tracking and 
 
 3. **The User Interface:** The official Home Assistant Android mobile app displays a clean dashboard panel and renders smooth historical graphs for daily and weekly analytics.
 
+
+---
+
+
+
+## 📊 Real-Time Mobile Dashboard & Analytics
+Below is the compiled interface showcasing smooth real-time metric tracking and historical data charts within the Home Assistant Android app:
+
+![Home Assistant Dashboard and Analytics](images/screenshot-all.png)
 
 
 ---
