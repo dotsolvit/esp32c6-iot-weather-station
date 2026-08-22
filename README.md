@@ -110,7 +110,7 @@ The physical hardware layout is composed of the following modules:
 
 ## 📜 License
 
-This project is fully open-source and released under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code for both educational and commercial use cases.
+This project is fully open-source and released under the MIT License. Feel free to use, modify, and distribute the code for both educational and commercial use cases.
 
 
 
