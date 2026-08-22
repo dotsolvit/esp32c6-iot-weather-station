@@ -54,39 +54,39 @@ By default, external connections are blocked. To allow access for your ESP32-C6,
 
 1. Open the configuration file / Відкрийте файл конфігурації:
 
-&#x20;  ```bash
+```bash
 
-&#x20;  sudo nano /etc/mosquitto/mosquitto.conf
+sudo nano /etc/mosquitto/mosquitto.conf
 
-&#x20;  ```
+```
 
 2. Append the following lines to the end of the file / Додайте ці рядки в кінець файлу:
 
-&#x20;  ```text
+```text
 
-&#x20;  listener 1883 0.0.0.0
+listener 1883 0.0.0.0
 
-&#x20;  allow_anonymous true
+allow_anonymous true
 
-&#x20;  ```
+```
 
 3. Save and exit (**Ctrl+O**, **Enter**, **Ctrl+X**) / Збережіть та вийдіть.
 
 4. Enable autostart and run the service / Увімкніть автозапуск та запустіть службу:
 
-&#x20;  ```bash
+```bash
 
-&#x20;  sudo systemctl enable --now mosquitto
+sudo systemctl enable --now mosquitto
 
-&#x20;  ```
+```
 
 5. Check status / Перевірте статус служби:
 
-&#x20;  ```bash
+```bash
 
-&#x20;  sudo systemctl status mosquitto
+sudo systemctl status mosquitto
 
-&#x20;  ```
+```
 
 
 
