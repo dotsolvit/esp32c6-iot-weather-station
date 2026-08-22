@@ -70,19 +70,19 @@ mkdir -p /home/oleksandr/homeassistant/config
 
 # Run Home Assistant Core container / Запуск контейнера Home Assistant
 
-docker run -d '\'
+docker run -d \
 
- --name homeassistant '\'
+ --name homeassistant \
 
- --privileged '\'
+ --privileged \
 
- --restart unless-stopped '\'
+ --restart unless-stopped \
 
- -v /home/oleksandr/homeassistant/config:/config '\'
+ -v /home/oleksandr/homeassistant/config:/config \
 
- -v /etc/localtime:/etc/localtime:ro '\'
+ -v /etc/localtime:/etc/localtime:ro \
 
- --net=host '\'
+ --net=host \
 
  ghcr.io/home-assistant/home-assistant:stable
 
@@ -104,25 +104,25 @@ docker run -d '\'
 
 3. Go to **Settings -> Devices & Integrations** and add the **MQTT** integration using `localhost` as the broker address.
 
-&#x20;  Перейдіть у **Налаштування -> Пристрої та інтеграції** та додайте інтеграцію **MQTT**, вказавши `localhost` як адресу брокера.
+ Перейдіть у **Налаштування -> Пристрої та інтеграції** та додайте інтеграцію **MQTT**, вказавши `localhost` як адресу брокера.
 
 4. Open the `configuration.yaml` file in your Pi's terminal to add your custom sensors:
 
-&#x20;  Відкрийте файл `configuration.yaml` у терміналі вашої малинки, щоб додати кастомні сенсори:
+ Відкрийте файл `configuration.yaml` у терміналі вашої малинки, щоб додати кастомні сенсори:
 
-&#x20;  ```bash
+```bash
 
-&#x20;  sudo nano /home/oleksandr/homeassistant/config/configuration.yaml
+sudo nano /home/oleksandr/homeassistant/config/configuration.yaml
 
-&#x20;  ```
+```
 
 5. Paste the contents from the `home-assistant/configuration_snippet.yaml` file from this repository into the end of the file.
 
-&#x20;  Вставте вміст файлу `home-assistant/configuration_snippet.yaml` з цього репозиторію в кінець файлу.
+  Вставте вміст файлу `home-assistant/configuration_snippet.yaml` з цього репозиторію в кінець файлу.
 
 6. Restart Home Assistant manually configured MQTT items via **Developer Tools -> YAML** interface.
 
-&#x20;  Перезапустіть налаштування MQTT через інтерфейс **Інструменти розробника -> YAML**.
+  Перезапустіть налаштування MQTT через інтерфейс **Інструменти розробника -> YAML**.
 
 
 
