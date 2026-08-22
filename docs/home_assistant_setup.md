@@ -70,21 +70,21 @@ mkdir -p /home/oleksandr/homeassistant/config
 
 # Run Home Assistant Core container / Запуск контейнера Home Assistant
 
-docker run -d 
+docker run -d '\'
 
-&#x20; --name homeassistant 
+ --name homeassistant '\'
 
-&#x20; --privileged 
+ --privileged '\'
 
-&#x20; --restart unless-stopped 
+ --restart unless-stopped '\'
 
-&#x20; -v /home/oleksandr/homeassistant/config:/config 
+ -v /home/oleksandr/homeassistant/config:/config '\'
 
-&#x20; -v /etc/localtime:/etc/localtime:ro 
+ -v /etc/localtime:/etc/localtime:ro '\'
 
-&#x20; --net=host 
+ --net=host '\'
 
-&#x20; ghcr.io/home-assistant/home-assistant:stable
+ ghcr.io/home-assistant/home-assistant:stable
 
 ```
 
